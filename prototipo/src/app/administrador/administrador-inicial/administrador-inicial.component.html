@@ -24,11 +24,11 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                              <tr *ngFor="let gerente of gerentes">
+                                <td>{{ gerente.nome }}</td>
+                                <td>{{ gerente.clientes }}</td>
+                                <td>{{ gerente.saldoPositivo }}</td>
+                                <td>{{ gerente.saldoNegativo }}</td>
                               </tr>
                             </tbody>
                           </table>                                                  
