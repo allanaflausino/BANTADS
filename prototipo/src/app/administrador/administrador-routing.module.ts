@@ -11,6 +11,10 @@ const routes: Routes = [
     component: ListarGerenteComponent,
   },
   {
+    path: 'administrador/inicial',
+    component: AdministradorInicialComponent
+  },
+  {
     path: 'administrador/lista',
     component: ListarGerenteComponent
   },
@@ -21,10 +25,6 @@ const routes: Routes = [
   {
     path: 'administrador/editar/:id',
     component: InserirEditarGerenteComponent
-  },
-  {
-    path: 'administrador/inicial',
-    component: AdministradorInicialComponent
   },
   {
     path: 'administrador/relatorio-clientes',
