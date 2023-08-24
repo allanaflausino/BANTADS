@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Cliente, Conta } from 'src/app/shared'
+import { Cliente, Conta } from 'src/app/shared';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -24,18 +24,14 @@ export class ClienteService {
   }
 
   inserir(cliente: Cliente): Observable<Cliente> {
-    return this.httpClient.post<Cliente>(this.BASE_URL,
-      JSON.stringify(cliente),
-      this.httpOptions)
+    return this.httpClient.post<Cliente>(this.BASE_URL, JSON.stringify(cliente), this.httpOptions);
   }
 
   buscarPorId(id: number): Observable<Cliente> {
-    return this.httpClient.get<Cliente>(this.BASE_URL + id,
-      this.httpOptions);
+    return this.httpClient.get<Cliente>(`${this.BASE_URL}/${id}`, this.httpOptions);
   }
   
   salvarConta(novaConta: Conta) {
-    return this.httpClient.post<Conta>(this.BASE_URL + 'contas', JSON.stringify(novaConta), this.httpOptions);
+    return this.httpClient.post<Conta>(`${this.BASE_URL}/contas`, JSON.stringify(novaConta), this.httpOptions);
   }
-  
 }
