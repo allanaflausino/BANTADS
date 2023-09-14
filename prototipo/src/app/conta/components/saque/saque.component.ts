@@ -45,7 +45,7 @@ export class SaqueComponent {
           title: 'Saque realizado com sucesso!',
           icon: 'success'
         });
-        this.contaService.sacar(this.conta, parseFloat(valor));
+        //this.contaService.sacar(this.conta, parseFloat(valor));
         valorSaque.value = "Ex: 100...";
       }
     });

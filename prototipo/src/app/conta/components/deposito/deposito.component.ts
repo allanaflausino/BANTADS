@@ -44,7 +44,7 @@ export class DepositoComponent {
             title: 'Depósito realizado com sucesso!',
             icon: 'success'
           });
-          this.contaService.depositar(this.conta, parseFloat(valor));
+          //this.contaService.depositar(this.conta, parseFloat(valor));
           valorDeposito.value = "Ex: 100...";
         }
       });
